@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.core
+//= require jquery.ui.slider
+//= require jquery.ui.mouse
+//= require jquery.ui.widget
 //= require bootstrap
 //= require turbolinks
 //= require_tree .

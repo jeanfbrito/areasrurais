@@ -51,6 +51,8 @@ gem "font-awesome-rails", "~> 3.2.1.3"
 
 gem 'high_voltage'
 
+gem "jquery-ui-rails", "~> 4.0.4"
+
 group :development do
   gem 'sqlite3'
   gem "better_errors"
