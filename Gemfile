@@ -49,6 +49,8 @@ gem "bootstrap-sass", "~> 2.3.2.1"
 
 gem "font-awesome-rails", "~> 3.2.1.3"
 
+gem 'high_voltage'
+
 group :development do
   gem 'sqlite3'
   gem "better_errors"
