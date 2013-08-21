@@ -16,7 +16,7 @@
 	color: #B22222;
 	width: 20px;
 	height: 22px;
-	background: url(../img/circlebutton.png) no-repeat;
+	background: url(/assets/circlebutton.png) no-repeat;
 	text-indent: -9999px;
 	border: 0;
 	margin-right: 3px;
@@ -30,7 +30,7 @@
 	cursor: pointer;  
 }            
 .arrowButton .prevArrow{
-	background: url(../img/prev.png) no-repeat; 
+	background: url(/assets/prev.png) no-repeat; 
 	width: 40px;
 	height: 80px;      
 	position: absolute;
@@ -38,7 +38,7 @@
 	left: 12px;        
 } 
 .arrowButton .nextArrow{                 
-	background: url(../img/next.png) no-repeat;
+	background: url(/assets/next.png) no-repeat;
 	width: 40px;
 	height: 80px;
 	position: absolute;

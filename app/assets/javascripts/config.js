@@ -74,10 +74,6 @@
 	
 	var map; 																	// Map Variable for Google Maps API	(Property Locations)	
 	var office_map;																// Map Variable for Google Maps API (Office location)																	
-	var $uislider =  $("#ui-slider");											// UI Slider Variables
-	var $beds = $("#beds");														//
-	var $uiAmount = $("#amount");												//
-	var $uiSliderPrice = $("#ui-slider-price");									//
 	var $cheight = $("footer").height()+$("header").height();					// Footer Staydown() function variable
 	var $shortlistCount = $("#short-list-count-js");							// ShortList counter
 
@@ -209,7 +205,11 @@
 		/* ---------------------------------------------------------------------- */
 		/*	Ini jQuery UI Slider
 		/* ---------------------------------------------------------------------- */
-	 	
+		var $uislider =  $("#ui-slider");											// UI Slider Variables
+		var $beds = $("#beds");														//
+		var $uiAmount = $("#amount");												//
+		var $uiSliderPrice = $("#ui-slider-price");									//
+
 		$uislider.slider({
 			range : true,
 			min : 0,
@@ -219,6 +219,7 @@
 				$beds.val("Select Bedrooms: " + ui.values[0] + " - " + ui.values[1]);
 			}
 		});
+
 		$beds.val("Select Bedrooms: " + $uislider.slider("values", 0) + " - " + $uislider.slider("values", 1));
 		$uiSliderPrice.slider({
 			range : true,

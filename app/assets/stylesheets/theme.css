@@ -73,14 +73,14 @@
 	}
 	
 	header, footer{
-		background:url('../img/pattern/low_contrast_linen.png');
+		background:url('/assets/pattern/low_contrast_linen.png');
 		background-color:#313131;
 		border-bottom:1px solid #313131;
 		display:block;
 	}
 	
 	body {
-		background:url('../img/pattern/whitey.png');
+		background:url('/assets/pattern/whitey.png');
 		margin:0;
 		padding:0;
 		font-size:13px;
@@ -280,7 +280,7 @@
 	}
 
 	.nav-collapse .navbar-form, .nav-collapse .navbar-search {
-		padding: 0 5px 5px 0;
+		padding: 0 5px 0 0;
 		height:auto; /*experimental*/
 	}
 
@@ -371,7 +371,7 @@
 	}
 	#logo{
 		display:block;
-		background:url('../img/logo.png') bottom left no-repeat;
+		background:url('/assets/logo.png') bottom left no-repeat;
 		width:auto;
 		height:80px;
 		padding:0;
@@ -387,7 +387,7 @@
 		z-index: 1;
 		top:5px;
 		right:0;
-		background:url('../img/secondary-logo.png') top right no-repeat;
+		background:url('/assets/secondary-logo.png') top right no-repeat;
 		cursor:pointer;
 	}
 	#call-phone {
@@ -610,7 +610,7 @@
 		top:5px;
 		right:1px;
 		
-		background:url('../img/bin.png') center center no-repeat #F1F1F1;
+		background:url('/assets/bin.png') center center no-repeat #F1F1F1;
 		border:none;
 		
 		 -webkit-border-radius: 3px;
@@ -720,7 +720,7 @@
 		width: 16px;
 		height: 16px;
 		cursor: default;
-		background: url('../img/slider/handle.png') no-repeat;
+		background: url('/assets/slider/handle.png') no-repeat;
 		border: none;
 		cursor: pointer;
 	}
@@ -731,7 +731,7 @@
 		font-size: .7em;
 		display: block;
 		border: 0;
-		background: url('../img/slider/sliderOverlay.png') repeat-x;
+		background: url('/assets/slider/sliderOverlay.png') repeat-x;
 		-moz-border-radius: 4px;
 		-webkit-border-radius: 4px;
 		-khtml-border-radius: 4px;
@@ -740,7 +740,7 @@
 	
 	.ui-slider-horizontal {
 		height: 8px;
-		background: url('../img/slider/sliderBg.png') repeat-x;
+		background: url('/assets/slider/sliderBg.png') repeat-x;
 		clear: both;
 		margin: 8px 0;
 		-moz-border-radius: 6px;
@@ -770,7 +770,7 @@
 	.ui-slider-vertical {
 		width: 6px;
 		height: 100px;
-		background: url('../img/slider/sliderBgVert.png') repeat-y;
+		background: url('/assets/slider/sliderBgVert.png') repeat-y;
 	}
 	
 	.ui-slider-vertical .ui-slider-handle {
@@ -782,7 +782,7 @@
 	.ui-slider-vertical .ui-slider-range {
 		left: 0;
 		width: 100%;
-		background: url('../img/slider/sliderOverlayVert.png') repeat-y;
+		background: url('/assets/slider/sliderOverlayVert.png') repeat-y;
 	}
 	
 	.ui-slider-vertical .ui-slider-range-min {
@@ -1102,7 +1102,7 @@
 	}
 	
 	footer .footer-links {
-		background: url('../img/transparant-20.png') top left repeat;
+		background: url('/assets/transparant-20.png') top left repeat;
 		padding:10px 10px 0;
 		margin:0 !important;
 	}
@@ -1240,7 +1240,7 @@
 	/*	Slider Tweaks
 	/* ---------------------------------------------------------------------- */	
 	.buttonCon {
-		background: url('../img/transparant-10.png') top left repeat;
+		background: url('/assets/transparant-10.png') top left repeat;
 		padding: 5px;
 		bottom:-5px;
 				border-radius: 5px 5px 0px 0px;
@@ -1344,7 +1344,7 @@
 	/* ---------------------------------------------------------------------- */
 	
 	.form-horizontal {
-		background: url('../img/transparant-5.png') top left repeat;
+		background: url('/assets/transparant-5.png') top left repeat;
 		padding: 15px 10px 17px;
 		margin:0 0 20px;
 		
@@ -1440,7 +1440,7 @@
 	}
 	
 	.property-info ul li {
-		background:url('../img/bullet-tick.png') left center no-repeat;
+		background:url('/assets/bullet-tick.png') left center no-repeat;
 		padding: 0 0 0 20px;
 		margin: 10px 0;
 		display:block;
@@ -1500,7 +1500,7 @@
 	/*	Block Quote
 	/* ---------------------------------------------------------------------- */
 	blockquote {
-		background: url('../img/transparant-5.png') top left repeat;
+		background: url('/assets/transparant-5.png') top left repeat;
 		font: italic 15px/1.6 'PT Serif', Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
 		padding: 20px 20px 20px 40px;
 		border-left: 2px solid #C9C9C9;
@@ -1579,7 +1579,7 @@
 	/* ---------------------------------------------------------------------- */
 	.qbox.accord-menu {
 		padding-bottom:0;
-		background:url('../img/paven.png')
+		background:url('/assets/paven.png')
 	}
 
 	/** Icon Span for each first child **/
@@ -2018,14 +2018,14 @@
 	
 	@media (min-width: 768px) and (max-width: 979px) {
 		body {
-			background:url('../img/pattern/low_contrast_linen.png');
+			background:url('/assets/pattern/low_contrast_linen.png');
 		}
 		h1, h2 {
 			font-size: 20px;
 		}
 		.body-text {
 			padding:15px 10px 10px;
-			background:url('../img/pattern/fabric_plaid.png');
+			background:url('/assets/pattern/fabric_plaid.png');
 			border-left:1px solid #fafafa;
 			border-right:1px solid #fafafa;
 		}
@@ -2077,11 +2077,11 @@
 	
 	@media (max-width: 480px) {
 		body {
-			background:url('../img/pattern/low_contrast_linen.png');
+			background:url('/assets/pattern/low_contrast_linen.png');
 		}
 		.body-text {
 			padding:15px 10px 10px;
-			background:url('../img/pattern/fabric_plaid.png');
+			background:url('/assets/pattern/fabric_plaid.png');
 			border-left:1px solid #fafafa;
 			border-right:1px solid #fafafa;
 		}
@@ -2133,7 +2133,7 @@
 		}
 		.body-text {
 			padding:15px 10px 10px;
-			background:url('../img/pattern/fabric_plaid.png');
+			background:url('/assets/pattern/fabric_plaid.png');
 			border-left:1px solid #fafafa;
 			border-right:1px solid #fafafa;
 		}
@@ -2141,7 +2141,7 @@
 			font-size: 19px;
 		}
 		body {
-			background:url('../img/pattern/low_contrast_linen.png');
+			background:url('/assets/pattern/low_contrast_linen.png');
 		}
 		#logo {
 			background-size:180px auto;

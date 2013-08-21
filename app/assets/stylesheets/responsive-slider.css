@@ -16,7 +16,7 @@
 .oneByOne1{
 	width: 940px;
 	height: 420px;   
-	background: #EFEFEF url(../img/paven.png) repeat;    
+	background: #EFEFEF url(/assets/paven.png) repeat;    
 	position: relative;
 	overflow: hidden;  	
 }   
