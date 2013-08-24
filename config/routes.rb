@@ -3,7 +3,10 @@ Areasrurais::Application.routes.draw do
   resources :properties
 
   namespace :admin do
-    resources :properties
+    resources :properties do
+      get :pictures_upload
+    end
+    resources :pictures, :only => [:index, :create, :destroy]
   end
 
   root :to => 'high_voltage/pages#show', id: 'home'

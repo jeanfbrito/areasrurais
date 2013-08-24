@@ -58,3 +58,10 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
 end
+
+# Use simple_form for create forms
+gem "simple_form", "~> 3.0.0.rc"
+
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.15'
+gem 'jquery-fileupload-rails'

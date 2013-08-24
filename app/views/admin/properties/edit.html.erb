@@ -1,0 +1,144 @@
+<div id="content-header">
+  <h1>Editar Imóvel - Cód. <%= @property.id %></h1>
+
+  <div class="btn-group">
+    <a class="btn btn-large tip-bottom" title="Manage Files"><i class="icon-file"></i></a>
+    <a class="btn btn-large tip-bottom" title="Manage Users"><i class="icon-user"></i></a>
+    <a class="btn btn-large tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a>
+    <a class="btn btn-large tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a>
+  </div>
+</div>
+<div id="breadcrumb">
+  <a href="index.html" title="" class="tip-bottom" data-original-title="Go to Home"><i class="icon-home"></i> Imóveis</a>
+  <a href="#">Editar</a>
+  <a href="#" class="current">Cód. <%= @property.id %></a>
+</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12 center" style="text-align: center;">         
+
+      <div class="widget-box">
+        <div class="widget-title">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#tab1">Cadastro</a></li>
+            <li><a data-toggle="tab" href="#tab2"><i class="fa-icon-picture"></i> Fotos</a></li>
+            <li><a data-toggle="tab" href="#tab3"><i class="fa-fa-icon-globe"></i> Website</a></li>
+            <li><a data-toggle="tab" href="#tab3"><i class="fa-fa-icon-tablet"></i> Catálogo Móvel</a></li>
+          </ul>
+        </div>
+        <div class="widget-content tab-content">
+          <div id="tab1" class="tab-pane active">
+            <%= render 'form' %>
+          </div>
+          <div id="tab2" class="tab-pane">
+
+            <div class="btn-toolbar">
+              <div class="btn-group" data-toggle="buttons-radio">
+                <button class="btn" onClick='javascript:return resort_images();' data-original-title="Bold - Ctrl+B">
+                  <i class="fa-icon-move"></i>
+                  Ordenar
+                </button>
+                <button class="btn" onClick='javascript:return select_cover();' data-original-title="Italic - Ctrl+I">
+                  <i class="fa-icon-picture"></i>
+                  Selecionar capa
+                </button>
+                <button class="btn" onClick='javascript:return select_website_images();' data-original-title="Italic - Ctrl+I">
+                  <i class="fa-icon-globe"></i>
+                  Website
+                </button>
+                <button class="btn" onClick='javascript:return select_mobile_images();' data-original-title="Italic - Ctrl+I">
+                  <i class="fa-icon-tablet"></i>
+                  Catálogo Móvel
+                </button>
+              </div>
+              
+              <a href="#static" data-url="<%= property_pictures_upload_path(:property_id => @property.id)%>" data-toggle="modal" class="pictures-upload-button btn btn-success"><i class="fa-icon-upload-alt"></i> Adicionar</a>  
+
+              <button class="btn btn-danger" onClick='javascript:return select_delete();' data-original-title="Bold - Ctrl+B">
+                <i class="fa-icon-remove"></i> 
+                Excluir
+              </button>
+              <button class="btn btn-primary" onClick='javascript:return deactivate_all();' data-original-title="Bold - Ctrl+B">
+                <i class="icon-ok icon-white"></i> 
+                Salvar alterações
+              </button>
+
+            </div>
+
+            <ul id="sortable">
+              
+              <% @property.pictures.each do |picture| %>
+                <li class="ui-state-default wrapper span3">
+                  <a title="Terras vizinhas" class="fancybox" href="<%= picture.file.url %>">
+                    <img src="<%= picture.file.thumb('288x216#').url %>" alt=""/>
+                  </a>
+                  <div class="published">
+                    <i class="fa-icon-globe" data-toggle="tooltip" title="Disponivel no website" style="display: none;"></i>
+                    <i class="fa-icon-tablet" data-toggle="tooltip" title="Não está disponivel no catálogo móvel" style="display: none;"></i>       
+
+                  </div>
+
+                  <div class="delete-picture">
+                    <i class="fa-icon-remove" data-toggle="tooltip" title="Disponivel no website" style="display: none;"></i>
+                  </div>
+                </li>
+                
+              <% end %>
+
+            </ul>
+
+          </div>
+          <div id="tab3" class="tab-pane">This is a Tab Three Content
+
+          </div>
+        </div>                            
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <!-- </div> -->
+
+</div>
+
+<script>
+(function() {
+  $('.pictures-upload-button').click(function() {
+    var url;
+
+    url = $(this).data('url');
+    return $.ajax({
+      url: url,
+      type: "GET",
+      success: function(data) {
+        return $('#static .modal-body').html(data);
+      },
+      error: function() {
+        return $('#static .modal-body').html("ERROR");
+      }
+    });
+  });
+
+}).call(this);
+
+$.fn.modal.defaults.height = function(){
+    // subtract the height of the modal header and footer
+    return $(window).height() - 265; 
+}
+$.fn.modal.defaults.width = 750;
+</script>
+
+<div id="static" class="modal hide fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
+  <div class="modal-header">    
+    <button type="button" data-dismiss="modal" class="btn close-modal">Fechar</button>
+    <h2>Adicionar novas fotografias</h2>
+  </div>
+  <div class="modal-body">
+    <p>Carregando...</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn">Fechar</button>
+  </div>
+</div>
