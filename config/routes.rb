@@ -2,6 +2,10 @@ Areasrurais::Application.routes.draw do
 
   resources :properties
 
+  namespace :admin do
+    resources :properties
+  end
+
   root :to => 'high_voltage/pages#show', id: 'home'
 
   # The priority is based upon order of creation: first created -> highest priority.
