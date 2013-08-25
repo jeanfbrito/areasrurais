@@ -17,5 +17,6 @@
 //= require jquery.ui.mouse
 //= require jquery.ui.widget
 //= require bootstrap
+//= require fotorama
 //= require turbolinks
 //= require_tree ./website

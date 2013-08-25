@@ -65,3 +65,5 @@ gem "simple_form", "~> 3.0.0.rc"
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.15'
 gem 'jquery-fileupload-rails'
+
+gem 'fotoramajs'

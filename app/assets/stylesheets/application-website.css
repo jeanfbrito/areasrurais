@@ -13,5 +13,6 @@
  *= require bootstrap-responsive 
  *= require font-awesome
  *= require jquery.ui.all
+ *= require fotorama
  *= require_tree ./website
  */

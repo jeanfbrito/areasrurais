@@ -1,0 +1,172 @@
+<section id="main">
+
+	<div class="body-text">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">							
+					<h1>
+						Property Name, Toronto ON 
+					</h1>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span8">
+					<!-- 2. Add images to <div class="fotorama"></div>. -->
+					<div class="fotorama"
+					data-nav="thumbs"
+					data-width="619"
+					data-height="410"
+					data-thumb-height="48">
+					<% @property.pictures.each do |picture| %>
+						<a href="<%= picture.file.thumb('619x410#').url %>">
+							<img src="<%= picture.file.thumb('78x50#').url %>">
+						</a>
+					<% end %>
+				</div>
+				<!-- // GALLERY START // -->
+<!-- 
+IMPORTANT NOTE: Each property gallery must have an unique ID for the gallery 
+function to work properly. This unique ID must reflect the folder 
+name which contains all the corresponding property images.
+
+**Please refer to the documentation for further usage:
+* IMPORTANT:
+* id   = [PLACE IMAGE FOLDER NAME] 
+* data = [PLACE TEXT TO BE DISPLAYED FOR ATTENTION - LEAVE "" FOR BLANK]
+* num  = [NUMBER OF IMAGES AND CORRESPONDING THUMBNAILS WHICH WILL BE DISPLAYED]
+-->
+
+<!-- <div class="gallery"  id="property_name" data-sticker="HOT" data-num="20">
+<p>Please enable your javascript to view this gallery</p>
+</div>
+<! gallery end -->
+
+<!-- about property -->	
+<div class="row-fluid property-info">
+	<h4>About the property</h4>
+
+	<p class="description">
+		Reflecting the status of this desirable destination a 4/5 bedroom townhouses at Terrace Yard offers 
+		contemporary living in unmatched style and elegance. With a high specification throughout, secure private 
+		undercroft parking behind remotely controlled access gates and Berkeley's quest for excellence, these are 
+		homes of unparalleled appeal. Imposing, contemporary architecture sets the scene for the sleek style of the 
+		interiors at Terrace Yard, where form blends perfectly with function to create homes beautifully designed for 
+		modern living. Living areas have been designed as fluid spaces, seamlessly linking rooms to provide an 
+		environment that's perfect for entertaining and family life alike.
+	</p>
+
+	<p class="description">
+		At the heart of the home, the kitchens feature Italian designer furniture, reflecting the cutting edge, 
+		contemporary architecture. Stone worktops, glass back panelling, mood lighting and a comprehensive range 
+		of Siemens appliances enhance the appeal of this functional space creating an ultimate environment of luxury 
+		living.
+	</p>
+
+	<p class="description">
+		<strong>Features:</strong> Living room, dining room, kitchen, 
+		powder room, lanai, carport, laundry area. masters bedroom with toilet and bathroom, terrace, hallway.
+	</p>
+	<p class="description">
+		Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+	</p>
+
+</div>
+<!-- end about property -->	
+</div>
+<!-- end span8 -->	
+
+<div class="span4">
+	<!--key features-->
+	<h4>Property Key Features</h4>
+	<div class="property-info">
+		<ul class="property-info">
+			<li><strong>Bedrooms:</strong> 2 </li>
+			<li><strong>Bathrooms:</strong> 5</li>
+			<li><strong>Parking</strong> 1</li>
+			<li><strong>Categories :</strong> Lot</li>
+			<li><strong>Location :</strong> Toronto, Ontario</li>
+			<li><strong>Floor Size :</strong> 2269 sq.m.</li>
+			<li><strong>Address :</strong> 231 McLevin, Toronto M1B4K7, Ontario</li>
+		</ul>
+		<p class="asking-price">
+			<span>Valor para venda</span> $259.000,00
+		</p>
+	</div>
+
+	<!--divider-->
+	<div class="divider"></div>
+
+	<!--single map-->
+	<h4>Geographic Location</h4>
+	<div id="single_map" style="width:100%; height:250px;" data-address="231 McLevin, Toronto M1B4K7, Ontario" data-iconrel="img/pin/marker_2.png" data-zoom="15"> </div>
+
+	<!--divider-->
+	<div class="divider"></div>
+
+	<h4 class="">Contact Agent</h4>
+	<!-- contact agent form -->
+	<div id="message"></div>
+	<form class="form-horizontal contact-agent-form" method="post" action="php/contact_agent.php" name="contactform" id="contactform">
+		<span class="label label-info">* signifies a required field</span>
+		<input type="text" name="prp_name" id="prp_name" value="Property Name">
+		<div class="field">
+			<div class="label_field">
+				<label for="name" accesskey="N">Name*</label>
+			</div>
+			<input type="text" name="name" id="name" placeholder="John Doe" class="span8">
+		</div>
+
+		<div class="field">
+			<div class="label_field">
+				<label for="email" accesskey="E">Email*</label>
+			</div>
+			<input type="email" id="email" name="email" placeholder="your_email@address.com" class="span8">
+		</div>
+
+		<div class="field">
+			<div class="label_field">
+				<label for="phone" accesskey="P">Phone*</label>
+			</div>
+			<input type="tel" name="phone" id="phone" placeholder="( 000 ) 000 - 0000" class="span8">
+		</div>
+
+		<div class="field">
+			<div class="label_field">
+				<label for="comments" accesskey="C">Message</label>
+			</div>
+			<textarea name="comments" id="comments" class="span8" placeholder="Type your messages here" rows="4"></textarea>
+		</div>
+
+		<div class="field">
+			<div class="label_field">
+				<label for="verify" accesskey="V">Verify*</label>
+			</div>
+			<input name="verify" type="text" id="verify" size="6" value="" placeholder="verify code">
+		</div>
+		<div class="field">
+			<div class="label_field">
+				<label></label>
+			</div>
+			<label><img src="php/image.php" alt="Image verification" border="0"></label>
+		</div>
+
+		<div class="button-align">
+			<div class="divider"></div>	
+			<input type="submit" class="btn" id="submit" value="Contact Agent">
+
+		</div>
+
+	</form>	
+	<!-- end contact agent form -->	
+</div>
+
+</div><!-- end row-fluid -->
+
+</div><!--end container-fluid-->
+
+</div><!-- end body-text -->
+
+
+
+<!-- /container -->
+</section>

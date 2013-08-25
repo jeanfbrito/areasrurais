@@ -1,141 +1,136 @@
-		<section id="main">
-			<!-- Slider start-->
-				<div id="slide-wrapper">
+<section id="main">
+	<!-- Slider start-->
+	<div id="slide-wrapper">
 
-					<div id="banner">  				
-						<div class="oneByOne_item">                                 	
-							<img src="http://jeanbrito.com/imobi/sitios/destaque/1.jpg" alt="Placeholder" class="bigImage">
-							<span class="slide5Txt1" data-animate="fadeInLeftBig">Fazenda à venda</span>								
-							<span class="slide5Txt2" data-animate="fadeInRightBig">R$1.000.000 | Olhos D'Agua, Taquara - RS</span>																						
-						</div>	
-						<% @banner.each do |banner|%> 
-							<div class="oneByOne_item"> 
-								<img src="<%= banner.get_cover.file.thumb('940x341#').url %>" alt="Placeholder" class="bigImage">
-								<span class="slide5Txt1" data-animate="fadeInLeftBig">Fazenda à venda</span>								
-								<span class="slide5Txt2" data-animate="fadeInRightBig">R$1.000.000 | Olhos D'Agua, Taquara - RS</span>																						
-							</div>	
-						<% end %>
-					</div>    
-			       
-			    </div>	<!-- end slider -->		  	
-			  
-			<div class="body-text">
-				
-				<div class="container-fluid">
-					
+		<div id="banner">  				
+			<% @banner.each do |banner|%> 
+			<div class="oneByOne_item"> 
+				<img src="<%= banner.get_cover.file.thumb('940x340#').url %>" alt="Placeholder" class="bigImage">
+				<span class="slide5Txt1" data-animate="fadeInLeftBig">Fazenda à venda</span>								
+				<span class="slide5Txt2" data-animate="fadeInRightBig">R$1.000.000 | Olhos D'Agua, Taquara - RS</span>																						
+			</div>	
+			<% end %>
+		</div>    
+
+	</div>	<!-- end slider -->		  	
+
+	<div class="body-text">
+
+		<div class="container-fluid">
+
+			<div class="row-fluid">
+
+				<!--west pane span9-->
+				<div class="span9">
 					<div class="row-fluid">
-						
-						<!--west pane span9-->
-						<div class="span9">
-							<div class="row-fluid">
-								<h1>Destaques da semana</h1>
-							</div>
-							<div class="row-fluid hotproperties">
-								<% @properties.each do |property| %>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html">
-									          <img src="<%= property.get_cover.file.thumb('212x140#').url %>" alt=""class="thumbnail">
-											</a>
-											
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					            <% end %>
-								<div class="clearfix"></div>
-							</div>
-						</div><!--end of west pane span9-->
-						
-						<!--east pane with width of span3-->
-						<div class="span3">	
-							<!--
-								"Quick Search" Widget
-								
-								SPECIAL NOTE: Please leave the inline style for <Select></Select> "width:100%",
-											  the width is automatically "Re-adjusted" with javascript
-											  See "config.js" for more details	
-							-->
-							<div class="qbox">
-				            	<h3><i class="icon-search pull-right"></i>Pesquisa Rápida</h3>
-								<form>
-				                	<div>
-				                        <label>Tipo de Propriedade</label>
-				                        <select data-placeholder="-- Todos --" class="chzn-select" style="width:100%;" tabindex="0">
-				                        	<option value="Todos">Todos</option>
-				                            <option value="Sitio">Sítio</option>
-				                            <option value="Fazenda">Fazenda</option>
-				                            <option value="Chácara">Chácara</option>
-				                            <option value="Casa">Casa</option>
-				                            <option value="Terreno">Terreno</option>
-				                        </select>
-				                    </div>
-				                	<div>
-				                        <label>Selecione a cidade</label>
-				                        <select data-placeholder="-- Selecione a cidade --" class="chzn-select" style="width:100%;" tabindex="1">
-				                        	<option value="Todas">Todas</option>
-											<option value="Ontario">Taquara</option>
-											<option value="Quebec">Parobé</option>
-											<option value="Nova Scotia">Igrejinha</option>
-											<option value="New Brunswick">São Francisco de Paula</option>
-											<option value="Manitoba">Santo Antônio</option>
-											<option value="British Columbia">Porto Alegre</option>
-											<option value="Prince Edward Island">Guaiba</option>
-				                        </select>
-				                    </div>
-				                    <div>
-				                        <label>Bairro / Distrito</label>
-				                        <select  data-placeholder="-- Bairros disponiveis --" multiple="multiple" class="chzn-select" style="width:100%;" tabindex="2">
-											<option value="Guelph">Centro</option>
-											<option value="Haldimand">Jardim do Prado</option>
-											<option value="Halton Hills">Rio da Ilha</option>
-											<option value="Hamilton">Olhos D'Agua</option>
-				                        </select>
-				                    </div>  
-				                    <div>
-				                        <p>
-				                            <input type="text" id="beds" readonly class="disabled">
-				                        </p>
-	
-				                   		<div id="ui-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-				                        	<div class="ui-slider-range ui-widget-header"></div>
-				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
-				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
-				                        </div>
-				                    </div>
-				                    <div>
-				                        <p>
-				                            <input type="text" id="amount" readonly class="disabled" style="margin-top:10px;">
-				                        </p>
-				                    
-				                   		<div id="ui-slider-price" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-				                        	<div class="ui-slider-range ui-widget-header"></div>
-				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
-				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
-				                        </div>
-				                    </div>
-				                    <button class="btn btn-inverse btn-small">Pesquisar</button>
-				                </form>
-				            </div>
-				            
-				            <!-- Start Zone Alert -->
-				        	<div class="qbox">
-				            	<h3><i class="icon-bullhorn pull-right"></i>Venda seu Imóvel</h3>
-				            	<div>
-				            		<p>Teremos o maior prazer em vender o seu imóvel. Entre em contato que nós ligamos para você.</p>
-				                    <a data-toggle="modal" href="#myModal" class="btn btn-small">Clique aqui</a>
-				            	</div>
-
-				         </div><!-- end Zone Alert -->
-	
-						</div><!--end of span3-->
-						
+						<h1>Destaques da semana</h1>
 					</div>
-					
-				</div>
-				
+					<div class="row-fluid hotproperties">
+						<% @properties.each do |property| %>
+						<div class="span4 set-equal-heights-js">
+							<div class="thumbnail">
+								<a href="<%= property_path(property) %>">
+									<img src="<%= property.get_cover.file.thumb('221x147#').url %>" alt=""class="thumbnail">
+								</a>
+
+								<div class="caption">
+									<a href="<%= property_path(property) %>" class="prop-title">Property Name, Toronto ON</a>
+									<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
+									<p class="price">$259,000</p>
+								</div>
+							</div>
+						</div>
+						<% end %>
+						<div class="clearfix"></div>
+					</div>
+				</div><!--end of west pane span9-->
+
+				<!--east pane with width of span3-->
+				<div class="span3">	
+<!--
+"Quick Search" Widget
+
+SPECIAL NOTE: Please leave the inline style for <Select></Select> "width:100%",
+the width is automatically "Re-adjusted" with javascript
+See "config.js" for more details	
+-->
+<div class="qbox">
+	<h3><i class="icon-search pull-right"></i>Pesquisa Rápida</h3>
+	<form>
+		<div>
+			<label>Tipo de Propriedade</label>
+			<select data-placeholder="-- Todos --" class="chzn-select" style="width:100%;" tabindex="0">
+				<option value="Todos">Todos</option>
+				<option value="Sitio">Sítio</option>
+				<option value="Fazenda">Fazenda</option>
+				<option value="Chácara">Chácara</option>
+				<option value="Casa">Casa</option>
+				<option value="Terreno">Terreno</option>
+			</select>
+		</div>
+		<div>
+			<label>Selecione a cidade</label>
+			<select data-placeholder="-- Selecione a cidade --" class="chzn-select" style="width:100%;" tabindex="1">
+				<option value="Todas">Todas</option>
+				<option value="Ontario">Taquara</option>
+				<option value="Quebec">Parobé</option>
+				<option value="Nova Scotia">Igrejinha</option>
+				<option value="New Brunswick">São Francisco de Paula</option>
+				<option value="Manitoba">Santo Antônio</option>
+				<option value="British Columbia">Porto Alegre</option>
+				<option value="Prince Edward Island">Guaiba</option>
+			</select>
+		</div>
+		<div>
+			<label>Bairro / Distrito</label>
+			<select  data-placeholder="-- Bairros disponiveis --" multiple="multiple" class="chzn-select" style="width:100%;" tabindex="2">
+				<option value="Guelph">Centro</option>
+				<option value="Haldimand">Jardim do Prado</option>
+				<option value="Halton Hills">Rio da Ilha</option>
+				<option value="Hamilton">Olhos D'Agua</option>
+			</select>
+		</div>  
+		<div>
+			<p>
+				<input type="text" id="beds" readonly class="disabled">
+			</p>
+
+			<div id="ui-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				<div class="ui-slider-range ui-widget-header"></div>
+				<a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+				<a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
 			</div>
-		</section><!--end section-->
+		</div>
+		<div>
+			<p>
+				<input type="text" id="amount" readonly class="disabled" style="margin-top:10px;">
+			</p>
+
+			<div id="ui-slider-price" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				<div class="ui-slider-range ui-widget-header"></div>
+				<a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+				<a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+			</div>
+		</div>
+		<button class="btn btn-inverse btn-small">Pesquisar</button>
+	</form>
+</div>
+
+<!-- Start Zone Alert -->
+<div class="qbox">
+	<h3><i class="icon-bullhorn pull-right"></i>Venda seu Imóvel</h3>
+	<div>
+		<p>Teremos o maior prazer em vender o seu imóvel. Entre em contato que nós ligamos para você.</p>
+		<a data-toggle="modal" href="#myModal" class="btn btn-small">Clique aqui</a>
+	</div>
+
+</div><!-- end Zone Alert -->
+
+</div><!--end of span3-->
+
+</div>
+
+</div>
+
+</div>
+</section><!--end section-->
