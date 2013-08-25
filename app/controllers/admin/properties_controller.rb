@@ -1,5 +1,10 @@
 class Admin::PropertiesController < ApplicationController
 	layout "admin" 
+
+  def property_params
+    params.require(:property).permit(:address_name, :value)
+  end
+
   def index
     @properties = Property.all
     respond_to do |format|
@@ -39,7 +44,7 @@ class Admin::PropertiesController < ApplicationController
     @property = Property.find(params[:id])
 
     respond_to do |format|
-      if @property.update_attributes(params[:property])
+      if @property.update_attributes(property_params)
         format.html { redirect_to [:admin, @property], notice: 'Property was successfully updated.' }
         format.json { head :no_content }
       else
