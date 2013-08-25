@@ -19,7 +19,7 @@ class Admin::PicturesController < ApplicationController
         }
         format.json {  
           #render :json => [@picture.to_jq_upload].to_json 
-          render json: {files: [@picture.to_jq_upload]}, status: :created, location: @picture    
+          render json: {files: [@picture.to_jq_upload]}, status: :created, location: [:admin, @picture]
         }
       end
     else 
