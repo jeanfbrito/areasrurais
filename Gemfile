@@ -67,3 +67,5 @@ gem 'dragonfly', '~>0.9.15'
 gem 'jquery-fileupload-rails'
 
 gem 'fotoramajs'
+
+gem 'initjs'

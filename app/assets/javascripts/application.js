@@ -18,4 +18,6 @@
 //= require jquery.ui.widget
 //= require bootstrap
 //= require turbolinks
+//= require areasrurais/areasrurais.js
+//= require init.js
 //= require_tree .

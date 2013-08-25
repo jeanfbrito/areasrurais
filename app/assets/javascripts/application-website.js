@@ -19,4 +19,6 @@
 //= require bootstrap
 //= require fotorama
 //= require turbolinks
+//= require areasrurais/areasrurais.js
+//= require init.js
 //= require_tree ./website
