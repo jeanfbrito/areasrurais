@@ -4,7 +4,8 @@ class Property < ActiveRecord::Base
   belongs_to :district
 
   def get_cover
-  	cover = pictures.where(property_id: id, cover: true).first
+  	#cover = pictures.where(property_id: id, cover: true).first
+    cover = pictures.where(property_id: id).first #just to dev tests
     if cover
       return cover
     end

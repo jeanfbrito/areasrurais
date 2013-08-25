@@ -9,7 +9,8 @@ Areasrurais::Application.routes.draw do
     resources :pictures, :only => [:index, :create, :destroy]
   end
 
-  root :to => 'high_voltage/pages#show', id: 'home'
+  #root :to => 'high_voltage/pages#show', id: 'home'
+  root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

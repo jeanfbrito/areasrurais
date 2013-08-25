@@ -8,26 +8,13 @@
 							<span class="slide5Txt1" data-animate="fadeInLeftBig">Fazenda à venda</span>								
 							<span class="slide5Txt2" data-animate="fadeInRightBig">R$1.000.000 | Olhos D'Agua, Taquara - RS</span>																						
 						</div>	
-						<div class="oneByOne_item">                                 	
-							<img src="http://jeanbrito.com/imobi/sitios/destaque/2.jpg" alt="Placeholder" class="bigImage">
-							<span class="slide5Txt1">Sitio à venda</span>								
-							<span class="slide5Txt2">R$1.000.000 | Rio da Ilha, Taquara - RS</span>														
-						</div>	
-						<div class="oneByOne_item">                                 	
-							<img src="http://jeanbrito.com/imobi/sitios/destaque/3.jpg" alt="Placeholder" class="bigImage">
-							<span class="slide5Txt1">Chácara à venda</span>								
-							<span class="slide5Txt2">R$1.000.000 | Padilha, Taquara - RS</span>													
-						</div>	
-						<div class="oneByOne_item">                                 	
-							<img src="http://jeanbrito.com/imobi/sitios/destaque/4.jpg" alt="Placeholder" class="bigImage">
-							<span class="slide5Txt1">Sítio à venda</span>								
-							<span class="slide5Txt2">R$1.000.000 | Morro Alto, Taquara - RS</span>														
-						</div>	
-						<div class="oneByOne_item">                                 	
-							<img src="http://jeanbrito.com/imobi/sitios/destaque/5.jpg" alt="Placeholder" class="bigImage">
-							<span class="slide5Txt1">Fazenda à venda</span>								
-							<span class="slide5Txt2">R$1.000.000 | Ilha Nova, Taquara - RS</span>														
-						</div>	
+						<% @banner.each do |image|%> 
+							<div class="oneByOne_item">                                 	
+								<img src="http://jeanbrito.com/imobi/sitios/destaque/1.jpg" alt="Placeholder" class="bigImage">
+								<span class="slide5Txt1" data-animate="fadeInLeftBig">Fazenda à venda</span>								
+								<span class="slide5Txt2" data-animate="fadeInRightBig">R$1.000.000 | Olhos D'Agua, Taquara - RS</span>																						
+							</div>	
+						<% end %>	
 					</div>    
 			       
 			    </div>	<!-- end slider -->		  	
@@ -44,6 +31,7 @@
 								<h1>Destaques da semana</h1>
 							</div>
 							<div class="row-fluid hotproperties">
+								<% @properties.each do %>
 					                <div class="span4 set-equal-heights-js">
 					                	<div class="thumbnail">
 											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/1.jpg" alt="Placeholder" class="thumbnail"></a>
@@ -54,87 +42,7 @@
 											</div>
 					                	</div>
 					                </div>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/2.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/3.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/4.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/5.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/1.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/2.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					                <div class="set-equal-heights-js span4">
-					                	<div class="thumbnail">
-					                		<span class="sticker sticker-hot">Novidade</span>
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/3.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                	</div>
-					                </div>
-					                <div class="span4 set-equal-heights-js">
-					                	<div class="thumbnail">
-											<a href="property.html"><img src="http://jeanbrito.com/imobi/sitios/index/4.jpg" alt="Placeholder" class="thumbnail"></a>
-											<div class="caption">
-													<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-													<p class="size">Bed: 5 • Bath: 2 • Park 2</p>
-													<p class="price">$259,000</p>
-											</div>
-					                  	</div>
-					                </div>
+					            <% end %>
 								<div class="clearfix"></div>
 							</div>
 						</div><!--end of west pane span9-->
