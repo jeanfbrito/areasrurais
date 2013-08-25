@@ -1,13 +1,11 @@
 class Admin::PropertiesController < ApplicationController
 	layout "admin" 
   def index
-    #@properties = Property.all
+    @properties = Property.all
     respond_to do |format|
       format.html # index.html.erb
     end
   end
-
-  
 
   def new
     @property = Property.new
@@ -42,7 +40,7 @@ class Admin::PropertiesController < ApplicationController
 
     respond_to do |format|
       if @property.update_attributes(params[:property])
-        format.html { redirect_to @property, notice: 'Property was successfully updated.' }
+        format.html { redirect_to [:admin, @property], notice: 'Property was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

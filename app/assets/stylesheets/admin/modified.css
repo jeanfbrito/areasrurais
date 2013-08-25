@@ -18,7 +18,7 @@
   top: 8px;
   width: 16px;
   height: 16px;
-  background: url(/assets/spinner.gif) center no-repeat;
+  background: url(/assets/admin/spinner.gif) center no-repeat;
   display: none;
   left: 0%;
 }
