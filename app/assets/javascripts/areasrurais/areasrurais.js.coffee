@@ -9,7 +9,7 @@ window.Areasrurais =
 
     init: ->
       # Something here. This is called in every page, with or without Turbolinks.
-      $('.' + _fotoramaClass + ':not([data-auto="false"])').fotorama()
+      $('.fotorama:not([data-auto="false"])').fotorama()
 
     finish: ->
       # Something here. This is called in every page, with or without Turbolinks.
