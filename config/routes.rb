@@ -1,6 +1,7 @@
 Areasrurais::Application.routes.draw do
 
   resources :properties
+  resources :contact_messages
 
   namespace :admin do
     resources :properties do
