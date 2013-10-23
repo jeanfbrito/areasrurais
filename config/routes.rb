@@ -1,6 +1,6 @@
 Areasrurais::Application.routes.draw do
 
-  resources :properties
+  resources :properties, :only => [:index, :show]
   resources :contact_messages, only: [:new, :create]
 
   namespace :admin do

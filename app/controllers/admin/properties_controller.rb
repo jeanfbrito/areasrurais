@@ -26,7 +26,7 @@ class Admin::PropertiesController < ApplicationController
 
     respond_to do |format|
       if @property.save
-        format.html { redirect_to @property, notice: 'Property was successfully created.' }
+        format.html { redirect_to edit_admin_property_path(@property), notice: 'Property was successfully created.' }
         format.json { render json: @property, status: :created, location: @property }
       else
         format.html { render action: "new" }
