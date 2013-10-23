@@ -108,20 +108,14 @@ name which contains all the corresponding property images.
 	<h4 class="">Fale conosco sobre este imóvel</h4>
 	<!-- contact agent form -->
 	<%= simple_form_for ContactMessage.new,  :html => { :class => 'form-horizontal contact-agent-form' , :id => 'contactform' } do |f| %>
-	  <div class="field">
-			<div class="label_field">
-				<label for="name" accesskey="N">Name*</label>
-			</div>
 			<%= f.input :name %>
-			
-		</div>
 
 	  <%= f.input :email %>
 	  <%= f.button :submit %>
 	<% end %>
 
 	<div id="message"></div>
-	<form class="form-horizontal contact-agent-form" method="post" action="/contact_messages" name="contactform" id="contactform">
+	<form class="form-horizontal contact-agent-form" method="post" action="/contact_messages" name="contactform" method="post"id="contactform">
 		<span class="label label-info">* signifies a required field</span>
 		<input type="text" name="prp_name" id="prp_name" value="Property Name">
 		<div class="field">

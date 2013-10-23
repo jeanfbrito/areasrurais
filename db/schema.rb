@@ -21,12 +21,15 @@ ActiveRecord::Schema.define(version: 20131015002750) do
   end
 
   create_table "contact_messages", force: true do |t|
-    t.string  "name"
-    t.date    "date"
-    t.string  "email"
-    t.string  "subject"
-    t.text    "message"
-    t.integer "property_id"
+    t.string   "name"
+    t.string   "city"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "subject"
+    t.text     "message"
+    t.integer  "property_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "districts", force: true do |t|

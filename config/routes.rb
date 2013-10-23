@@ -1,7 +1,7 @@
 Areasrurais::Application.routes.draw do
 
   resources :properties
-  resources :contact_messages
+  resources :contact_messages, only: [:new, :create]
 
   namespace :admin do
     resources :properties do
@@ -9,6 +9,8 @@ Areasrurais::Application.routes.draw do
     end
     resources :pictures, :only => [:index, :create, :destroy]
   end
+
+  get '/contato', :to => "contact_messages#new", :as => "contact"
 
   #root :to => 'high_voltage/pages#show', id: 'home'
   root to: "home#index"

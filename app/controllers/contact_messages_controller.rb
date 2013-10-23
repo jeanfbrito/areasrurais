@@ -17,14 +17,10 @@ class ContactMessagesController < ApplicationController
   def create
     @contact_message = ContactMessage.new params.require(:contact_message).permit(:name, :email, :message, :phone)
 
-    respond_to do |format|
-      if @contact_message.save
-        format.html { redirect_to @contact_message, notice: 'contact_message was successfully created.' }
-        format.json { render json: @contact_message, status: :created, location: @contact_message }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @contact_message.errors, status: :unprocessable_entity }
-      end
+    if @contact_message.save
+      redirect_to contact_path(), notice: "Contato realizado com sucesso!"
+    else
+      render 'contact_messages/new'
     end
   end
 
