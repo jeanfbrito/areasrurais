@@ -1,8 +1,8 @@
-<style type="text/css">
-  .controls {
-   margin-left: 0px;
-  }
-</style>
+<% flash.each do |key, value| %>
+  <div class="<%= flash_class(key) %>">
+    <%= value %>
+  </div>
+<% end %>
 
 <%= simple_form_for(@contact_message, html: { class: 'form-horizontal contact-agent-form' }) do |f| %>
 

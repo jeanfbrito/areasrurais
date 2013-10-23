@@ -15,10 +15,11 @@ class ContactMessagesController < ApplicationController
   end
 
   def create
-    @contact_message = ContactMessage.new params.require(:contact_message).permit(:name, :email, :message, :phone)
+    @contact_message = ContactMessage.new params.require(:contact_message).permit(:name, :email, :message, :phone, :city)
 
     if @contact_message.save
-      redirect_to contact_path(), notice: "Contato realizado com sucesso!"
+      flash[:success] = "Contato realizado com sucesso!"
+      redirect_to contact_path()#, notice: "Contato realizado com sucesso!"
     else
       render 'contact_messages/new'
     end
