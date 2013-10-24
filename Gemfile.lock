@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/mpatrick/i18n_alchemy.git
+  revision: f9dcf46dc2518ca026206beb957e896eec0d9020
+  branch: rails4
+  specs:
+    i18n_alchemy (0.1.0)
+      activesupport (>= 3.0.0)
+      i18n (~> 0.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,9 +63,15 @@ GEM
     fotoramajs (4.3.0.1)
       jquery-rails (>= 2.1.0)
       sprockets (>= 2)
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     high_voltage (1.2.4)
     hike (1.2.3)
     i18n (0.6.5)
+    inherited_resources (1.4.1)
+      has_scope (~> 0.6.0.rc)
+      responders (~> 1.0.0.rc)
     initjs (1.0.0)
       jquery-rails
       rails (>= 3.1)
@@ -101,6 +116,8 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    responders (1.0.0)
+      railties (>= 3.2, < 5)
     sass (3.2.10)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -148,6 +165,8 @@ DEPENDENCIES
   font-awesome-rails (~> 3.2.1.3)
   fotoramajs
   high_voltage
+  i18n_alchemy!
+  inherited_resources
   initjs
   jbuilder (~> 1.2)
   jquery-fileupload-rails

@@ -69,3 +69,7 @@ gem 'jquery-fileupload-rails'
 gem 'fotoramajs'
 
 gem 'initjs'
+
+gem 'i18n_alchemy', github: 'mpatrick/i18n_alchemy', branch: 'rails4'
+
+gem 'inherited_resources'

@@ -1,5 +1,8 @@
 class Property < ActiveRecord::Base
 
+  include I18n::Alchemy
+  localize :value, using: :number
+
   has_many :pictures
   belongs_to :district
 

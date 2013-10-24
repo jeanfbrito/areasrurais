@@ -17,3 +17,7 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree ./admin
+
+$(document).ready(function($) {
+  $("input[type=text].currency").setMask('decimal');
+});
