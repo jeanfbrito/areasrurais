@@ -98,49 +98,14 @@
 </div>
 <div class="widget-content nopadding">
 
-  <div class="control-group">
-    <%= f.label :bedrooms %>
-    <div class="controls">
-      <%= f.text_field :bedrooms %>
-    </div>
-  </div>
+    <%= f.input :bedrooms, collection: 1..10, prompt: "Bedrooms" %>
+    <%= f.input :suits, collection: 1..10, prompt: "Suits" %>
+    <%= f.input :garages, collection: 1..10, prompt: "Garages" %>
+    <%= f.input :furnished %>
 
-  <div class="control-group">
-    <%= f.label :suits %>
-    <div class="controls">
-      <%= f.text_field :suits %>
-    </div>
-  </div>
+    <%= f.input :construction_year %>
 
-  <div class="control-group">
-    <%= f.label :construction_year %>
-    <div class="controls">
-      <%= f.text_field :construction_year %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :garages %>
-    <div class="controls">
-      <%= f.text_field :garages %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :furnished %>
-    <div class="controls">
-      <%= f.text_field :furnished %>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <%= f.label :description %>
-    <div class="controls">
-      <%= f.text_field :description %>
-    </div>
-  </div>
-   </div>  
-</div>
+    <%= f.input :description %>
 
 <div class="widget-box">
 <div class="widget-title">
