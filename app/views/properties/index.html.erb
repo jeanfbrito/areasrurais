@@ -22,34 +22,34 @@
 								</div>
 							</div>
 							<!-- end page title -->
-							
+
 							<!--start list-->
-							<div class="container-fluid">
-								<div class="row-fluid">
-									<div class="span4">
-										<a href="property.html"><img src="http://placehold.it/220x165/E37F14/FFFFFF" alt="Placeholder Image" /></a>
-										<span class="sticker sticker-hot">Hot</span>
-									</div>
-									<div class="span8">
-										<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-										<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
-										<p class="price">$259,000</p>
-										<p class="description">
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-										</p>
-										<!-- Short List Btns -->
-										<ul class="list-btns">
-											<li><a href="javascript:void(0);" id="property_1" class="add-to-list-js" 
-												data-shortlist="<img src='http://placehold.it/220x165/E37F14/FFFFFF' alt='Placeholder Image'>
-													  <div><a href='javascript:void(0);' id='property_1'>Property Name</a>$259,000</div>">
-												<i class="icon-plus-sign"></i>Short List</a></li>
-											<li><a href="property.html"><i class="icon-info-sign"></i>View Details</a></li>
-										</ul>
-										<!-- end short list -->
+							<% @properties.each do |property| %>
+								<div class="container-fluid">
+									<div class="row-fluid">
+										<div class="span4">
+											<a href="<%= property_path(property) %>">
+												<img src="<%= property.get_cover.file.thumb('220x165#').url %>" alt="Placeholder Image" />
+											</a>
+											<span class="sticker sticker-hot">Hot</span>
+										</div>
+										<div class="span8">
+											<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
+											<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
+											<p class="price">$259,000</p>
+											<p class="description">
+												Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+												Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+											</p>
+											<!-- Short List Btns -->
+											<ul class="list-btns">
+												<li><a href="<%= property_path(property) %>"><i class="icon-info-sign"></i> Exibir detalhes </a></li>
+											</ul>
+											<!-- end short list -->
+										</div>
 									</div>
 								</div>
-							</div>
+							<% end %>
 							<!--end list-->
 							
 							<!--start list-->
@@ -72,146 +72,6 @@
 											<li><a href="javascript:void(0);" id="property_2" class="add-to-list-js" 
 												data-shortlist="<img src='http://placehold.it/220x165/E37F14/FFFFFF' alt='Placeholder Image'>
 													  <div><a href='javascript:void(0);' id='property_2'>Property Name</a>$259,000</div>">
-												<i class="icon-plus-sign"></i>Short List</a></li>
-											<li><a href="property.html"><i class="icon-info-sign"></i>View Details</a></li>
-										</ul>
-										<!-- end short list -->
-									</div>
-								</div>
-							</div>
-							<!--end list-->
-							
-							<!--start list-->
-							<div class="container-fluid">
-								<div class="row-fluid">
-									<div class="span4">
-										<a href="property.html"><img src="http://placehold.it/220x165/E37F14/FFFFFF" alt="Placeholder Image" /></a>
-									</div>
-									<div class="span8">
-										<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-										<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
-										<p class="price">$259,000</p>
-										<p class="description">
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-										</p>
-										<!-- Short List Btns -->
-										<ul class="list-btns">
-											<li><a href="javascript:void(0);" id="property_3" class="add-to-list-js" 
-												data-shortlist="<img src='http://placehold.it/220x165/E37F14/FFFFFF' alt='Placeholder Image'>
-													  <div><a href='javascript:void(0);' id='property_3'>Property Name</a>$259,000</div>">
-												<i class="icon-plus-sign"></i>Short List</a></li>
-											<li><a href="property.html"><i class="icon-info-sign"></i>View Details</a></li>
-										</ul>
-										<!-- end short list -->
-									</div>
-								</div>
-							</div>
-							<!--end list-->
-							
-							<!--start list-->
-							<div class="container-fluid">
-								<div class="row-fluid">
-									<div class="span4">
-										<a href="property.html"><img src="http://placehold.it/220x165/E37F14/FFFFFF" alt="Placeholder Image" /></a>
-									</div>
-									<div class="span8">
-										<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-										<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
-										<p class="price">$259,000</p>
-										<p class="description">
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-										</p>
-										<!-- Short List Btns -->
-										<ul class="list-btns">
-											<li><a href="javascript:void(0);" id="property_4" class="add-to-list-js" 
-												data-shortlist="<img src='http://placehold.it/220x165/E37F14/FFFFFF' alt='Placeholder Image'>
-													  <div><a href='javascript:void(0);' id='property_4'>Property Name</a>$259,000</div>">
-												<i class="icon-plus-sign"></i>Short List</a></li>
-											<li><a href="property.html"><i class="icon-info-sign"></i>View Details</a></li>
-										</ul>
-										<!-- end short list -->
-									</div>
-								</div>
-							</div>
-							<!--end list-->
-							
-							<!--start list-->
-							<div class="container-fluid">
-								<div class="row-fluid">
-									<div class="span4">
-										<a href="property.html"><img src="http://placehold.it/220x165/E37F14/FFFFFF" alt="Placeholder Image" /></a>
-									</div>
-									<div class="span8">
-										<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-										<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
-										<p class="price">$259,000</p>
-										<p class="description">
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-										</p>
-										<!-- Short List Btns -->
-										<ul class="list-btns">
-											<li><a href="javascript:void(0);" id="property_5" class="add-to-list-js" 
-												data-shortlist="<img src='http://placehold.it/220x165/E37F14/FFFFFF' alt='Placeholder Image'>
-													  <div><a href='javascript:void(0);' id='property_5'>Property Name</a>$259,000</div>">
-												<i class="icon-plus-sign"></i>Short List</a></li>
-											<li><a href="property.html"><i class="icon-info-sign"></i>View Details</a></li>
-										</ul>
-										<!-- end short list -->
-									</div>
-								</div>
-							</div>
-							<!--end list-->
-							
-							<!--start list-->
-							<div class="container-fluid">
-								<div class="row-fluid">
-									<div class="span4">
-										<a href="property.html"><img src="http://placehold.it/220x165/E37F14/FFFFFF" alt="Placeholder Image" /></a>
-									</div>
-									<div class="span8">
-										<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-										<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
-										<p class="price">$259,000</p>
-										<p class="description">
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
-										</p>
-										<!-- Short List Btns -->
-										<ul class="list-btns">
-											<li><a href="javascript:void(0);" id="property_6" class="add-to-list-js" 
-												data-shortlist="<img src='http://placehold.it/220x165/E37F14/FFFFFF' alt='Placeholder Image'>
-													  <div><a href='javascript:void(0);' id='property_6'>Property Name</a>$259,000</div>">
-												<i class="icon-plus-sign"></i>Short List</a></li>
-											<li><a href="property.html"><i class="icon-info-sign"></i>View Details</a></li>
-										</ul>
-										<!-- end short list -->
-									</div>
-								</div>
-							</div>
-							<!--end list-->
-							
-							<!--start list-->
-							<div class="container-fluid">
-								<div class="row-fluid">
-									<div class="span4">
-										<a href="property.html"><img src="http://placehold.it/220x165/E37F14/FFFFFF" alt="Placeholder Image" /></a>
-									</div>
-									<div class="span8">
-										<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-										<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
-										<p class="price">$259,000</p>
-										<p class="description">
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
-											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-										</p>
-										<!-- Short List Btns -->
-										<ul class="list-btns">
-											<li><a href="javascript:void(0);" id="property_7" class="add-to-list-js" 
-												data-shortlist="<img src='http://placehold.it/220x165/E37F14/FFFFFF' alt='Placeholder Image'>
-													  <div><a href='javascript:void(0);' id='property_7'>Property Name</a>$259,000</div>">
 												<i class="icon-plus-sign"></i>Short List</a></li>
 											<li><a href="property.html"><i class="icon-info-sign"></i>View Details</a></li>
 										</ul>
