@@ -1,0 +1,7 @@
+/* resolve o problema dos forms com a classe controls */
+.form-horizontal .controls {
+  margin-left: 0px;
+}
+.container-fluid.demo p {
+	margin-bottom: 0px;
+}
