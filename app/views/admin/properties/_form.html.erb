@@ -103,22 +103,22 @@
     <div class="row-fluid">
       <div class="field span3">
         <div class="span12">
-          <%= f.input :bedrooms, collection: 1..10, prompt: "Bedrooms", placeholder: '120', :input_html => { :class => "span12" }%>
+          <%= f.input :bedrooms, collection: 0..10, prompt: "Bedrooms", placeholder: '120', :input_html => { :class => "span12" }%>
         </div>
       </div>
       <div class="field span3">
         <div class="span12">
-          <%= f.input :suits, collection: 1..10, prompt: "Suits", placeholder: '120', :input_html => { :class => "span12" }%>
+          <%= f.input :suits, collection: 0..10, prompt: "Suits", placeholder: '120', :input_html => { :class => "span12" }%>
         </div>
       </div>
       <div class="field span3">
         <div class="span12">
-          <%= f.input :bathrooms, collection: 1..10, prompt: "Bathrooms", placeholder: '120', :input_html => { :class => "span12" }%>
+          <%= f.input :bathrooms, collection: 0..10, prompt: "Bathrooms", placeholder: '120', :input_html => { :class => "span12" }%>
         </div>
       </div>
       <div class="field span3">
         <div class="span12">
-          <%= f.input :garages, collection: 1..10, prompt: "Garages", placeholder: '120', :input_html => { :class => "span12" }%>
+          <%= f.input :garages, collection: 0..10, prompt: "Garages", placeholder: '120', :input_html => { :class => "span12" }%>
         </div>
       </div>
     </div>

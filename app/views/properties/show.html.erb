@@ -82,16 +82,49 @@ name which contains all the corresponding property images.
 	<h4>Principais Características do Imóvel</h4>
 	<div class="property-info">
 		<ul class="property-info">
-			<li><strong>Quartos:</strong> 2 </li>
-			<li><strong>Banheiros:</strong> 5</li>
-			<li><strong>Vagas de garagem:</strong> 1</li>
-			<li><strong>Categories :</strong> Lot</li>
-			<li><strong>Localização :</strong> RS-020, São Francisco de Paula</li>
-			<li><strong>Floor Size :</strong> 2269 sq.m.</li>
-			<li><strong>Address :</strong> 231 McLevin, Toronto M1B4K7, Ontario</li>
+			<% if @property.bedrooms > 0 %>
+			<li>
+				<strong>Quartos:</strong> 
+					<%= @property.bedrooms %> 
+			</li>
+			<% end %>
+			<% if @property.suits > 0 %>
+			<li>
+				<strong>Suites:</strong> 
+					<%= @property.suits %> 
+			</li>
+			<% end %>
+			<% if @property.bathrooms > 0 %>
+			<li>
+				<strong>Banheiros:</strong> 
+					<%= @property.bathrooms %> 
+			</li>
+			<% end %>
+			<% if @property.garages > 0 %>
+			<li>
+				<strong>Vagas de garagem:</strong> 
+					<%= @property.garages %> 
+			</li>
+			<% end %>
+			<% if @property.privative_area > 0 %>
+			<li>
+				<strong>Área privativa:</strong> 
+					<%= @property.privative_area %> metros quadrados
+			</li>
+			<% end %>
+			<% if @property.terrain_area > 0 %>
+			<li>
+				<strong>Área do terreno:</strong> 
+					<%= @property.terrain_area %> metros quadrados
+			</li>
+			<% end %>
+			<li>
+				<strong>Localização :</strong>
+					<%= @property.district.name %>, <%= @property.district.city.name %>
+			</li>
 		</ul>
 		<p class="asking-price">
-			<span>Valor para venda</span> $259.000,00
+			<span>Valor para venda</span> <%= number_to_currency(@property.sell_price) %>
 		</p>
 	</div>
 
