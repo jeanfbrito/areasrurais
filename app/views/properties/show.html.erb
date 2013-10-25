@@ -3,28 +3,28 @@
 	<div class="body-text">
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<!-- Removes the title
-				 <div class="span12">							
-					<h1>
-						Property Name, Toronto ON 
-					</h1>
-				</div> -->
-			</div>
-			<div class="row-fluid">
-				<div class="span8">
-					<!-- 2. Add images to <div class="fotorama"></div>. -->
-					<div class="fotorama"
-					data-nav="thumbs"
-					data-width="619"
-					data-height="410"
-					data-thumb-height="48">
-					<% @property.pictures.each do |picture| %>
-						<a href="<%= picture.file.thumb('619x410#').url %>">
-							<img src="<%= picture.file.thumb('78x50#').url %>">
-						</a>
-					<% end %>
-				</div>
-				<!-- // GALLERY START // -->
+<!-- Removes the title
+<div class="span12">							
+<h1>
+Property Name, Toronto ON 
+</h1>
+</div> -->
+</div>
+<div class="row-fluid">
+	<div class="span8">
+		<!-- 2. Add images to <div class="fotorama"></div>. -->
+		<div class="fotorama"
+		data-nav="thumbs"
+		data-width="619"
+		data-height="410"
+		data-thumb-height="48">
+		<% @property.pictures.each do |picture| %>
+		<a href="<%= picture.file.thumb('619x410#').url %>">
+			<img src="<%= picture.file.thumb('78x50#').url %>">
+		</a>
+		<% end %>
+	</div>
+	<!-- // GALLERY START // -->
 <!-- 
 IMPORTANT NOTE: Each property gallery must have an unique ID for the gallery 
 function to work properly. This unique ID must reflect the folder 
@@ -82,53 +82,58 @@ name which contains all the corresponding property images.
 	<h4>Principais Características do Imóvel</h4>
 	<div class="property-info">
 		<ul class="property-info">
-			<% if @property.bedrooms > 0 %>
+			<% if have_value(@property.bedrooms) %>
 			<li>
 				<strong>Quartos:</strong> 
-					<%= @property.bedrooms %> 
+				<%= @property.bedrooms %> 
 			</li>
 			<% end %>
-			<% if @property.suits > 0 %>
+			<% if have_value(@property.suits) %>
 			<li>
 				<strong>Suites:</strong> 
-					<%= @property.suits %> 
+				<%= @property.suits %> 
 			</li>
 			<% end %>
-			<% if @property.bathrooms > 0 %>
+			<% if have_value(@property.bathrooms) %>
 			<li>
 				<strong>Banheiros:</strong> 
-					<%= @property.bathrooms %> 
+				<%= @property.bathrooms %> 
 			</li>
 			<% end %>
-			<% if @property.garages > 0 %>
+			<% if have_value(@property.garages) %>
 			<li>
 				<strong>Vagas de garagem:</strong> 
-					<%= @property.garages %> 
+				<%= @property.garages %> 
 			</li>
 			<% end %>
-			<% if @property.privative_area > 0 %>
+			<% if have_value(@property.privative_area) %>
 			<li>
 				<strong>Área privativa:</strong> 
-					<%= @property.privative_area %> metros quadrados
+				<%= @property.privative_area %> metros quadrados
 			</li>
 			<% end %>
-			<% if @property.terrain_area > 0 %>
+			<% if have_value(@property.terrain_area) %>
 			<li>
 				<strong>Área do terreno:</strong> 
-					<%= @property.terrain_area %> metros quadrados
+				<%= @property.terrain_area %> metros quadrados
 			</li>
 			<% end %>
 			<li>
 				<strong>Localização :</strong>
-					<%= @property.district.name %>, <%= @property.district.city.name %>
+				<%= @property.district.name %>, <%= @property.district.city.name %>
 			</li>
 		</ul>
 		<p class="asking-price">
-			<span>Valor para venda</span> <%= number_to_currency(@property.sell_price) %>
+			<span>Valor para venda</span>
+			<% if have_value(@property.sell_price) %>
+			 	<%= number_to_currency(@property.sell_price) %>
+			<% else %>
+				Consulte
+			<% end %>
 		</p>
 	</div>
 
-		<!--divider-->
+	<!--divider-->
 	<div class="divider"></div>
 
 	<!--single map-->
@@ -141,10 +146,10 @@ name which contains all the corresponding property images.
 	<h4 class="">Fale conosco sobre este imóvel</h4>
 	<!-- contact agent form -->
 	<%= simple_form_for ContactMessage.new,  :html => { :class => 'form-horizontal contact-agent-form' , :id => 'contactform' } do |f| %>
-			<%= f.input :name %>
+	<%= f.input :name %>
 
-	  <%= f.input :email %>
-	  <%= f.button :submit %>
+	<%= f.input :email %>
+	<%= f.button :submit %>
 	<% end %>
 
 	<div id="message"></div>

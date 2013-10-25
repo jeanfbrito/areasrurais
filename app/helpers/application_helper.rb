@@ -8,5 +8,13 @@ module ApplicationHelper
         when :alert then "alert alert-error"
     end
   end
+
+  def have_value(item)
+    if item.present? && item > 0
+      return true
+    else
+      return false
+    end
+  end
   
 end
