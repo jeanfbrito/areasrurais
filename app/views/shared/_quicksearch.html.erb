@@ -1,0 +1,61 @@
+<div class="qbox">
+  <h3><i class="icon-search pull-right"></i>Pesquisa Rápida</h3>
+  <form>
+    <div>
+      <label>Tipo de Propriedade</label>
+      <select data-placeholder="-- Todos --" class="chzn-select" style="width:100%;" tabindex="0">
+        <option value="Todos">Todos</option>
+        <option value="Sitio">Sítio</option>
+        <option value="Fazenda">Fazenda</option>
+        <option value="Chácara">Chácara</option>
+        <option value="Casa">Casa</option>
+        <option value="Terreno">Terreno</option>
+      </select>
+    </div>
+    <div>
+      <label>Selecione a cidade</label>
+      <select data-placeholder="-- Selecione a cidade --" class="chzn-select" style="width:100%;" tabindex="1">
+        <option value="Todas">Todas</option>
+        <option value="Ontario">Taquara</option>
+        <option value="Quebec">Parobé</option>
+        <option value="Nova Scotia">Igrejinha</option>
+        <option value="New Brunswick">São Francisco de Paula</option>
+        <option value="Manitoba">Santo Antônio</option>
+        <option value="British Columbia">Porto Alegre</option>
+        <option value="Prince Edward Island">Guaiba</option>
+      </select>
+    </div>
+    <div>
+      <label>Bairro / Distrito</label>
+      <select  data-placeholder="-- Bairros disponiveis --" multiple="multiple" class="chzn-select" style="width:100%;" tabindex="2">
+        <option value="Guelph">Centro</option>
+        <option value="Haldimand">Jardim do Prado</option>
+        <option value="Halton Hills">Rio da Ilha</option>
+        <option value="Hamilton">Olhos D'Agua</option>
+      </select>
+    </div>  
+    <div>
+      <p>
+        <input type="text" id="beds" readonly class="disabled">
+      </p>
+
+      <div id="ui-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+        <div class="ui-slider-range ui-widget-header"></div>
+        <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+        <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <p>
+        <input type="text" id="amount" readonly class="disabled" style="margin-top:10px;">
+      </p>
+
+      <div id="ui-slider-price" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+        <div class="ui-slider-range ui-widget-header"></div>
+        <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+        <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <button class="btn btn-inverse btn-small">Pesquisar</button>
+  </form>
+</div>
