@@ -34,12 +34,30 @@
 											<span class="sticker sticker-hot">Hot</span>
 										</div>
 										<div class="span8">
-											<a href="property.html" class="prop-title">Property Name, Toronto ON</a>
-											<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
-											<p class="price">$259,000</p>
+											<a href="<%= property_path(property) %>" class="prop-title">Property Name, Toronto ON</a>
+											<p class="size">
+												<% if have_value(property.bedrooms) %>
+												• Quartos: 	<%= property.bedrooms %> 
+												<% end %>
+												<% if have_value(property.suits) %>
+												• Suites: <%= property.suits %> 
+												<% end %>
+												<% if have_value(property.bathrooms) %>
+												• Banheiros: <%= property.bathrooms %> 
+												<% end %>
+												<% if have_value(property.garages) %>
+												• Vagas de garagem: <%= property.garages %> 
+												<% end %>
+											</p>
+											<p class="price">
+												<% if have_value(property.sell_price) %>
+												 	<%= number_to_currency(property.sell_price) %>
+												<% else %>
+													Consulte o valor
+												<% end %>
+											</p>
 											<p class="description">
-												Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
-												Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+												<%= truncate property.description, length: 160 %>
 											</p>
 											<!-- Short List Btns -->
 											<ul class="list-btns">

@@ -12,4 +12,9 @@ class Property < ActiveRecord::Base
     false
   end
 
+  def has_value?(field_name)
+    return true if send(field_name).present? && send(field_name) > 0
+    false
+  end
+
 end
