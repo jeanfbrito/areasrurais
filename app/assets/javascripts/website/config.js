@@ -202,37 +202,37 @@
 		
 		/*end oneByOne*/ 
 		 
-		/* ---------------------------------------------------------------------- */
-		/*	Ini jQuery UI Slider
-		/* ---------------------------------------------------------------------- */
-		var $uislider =  $("#ui-slider");											// UI Slider Variables
-		var $beds = $("#beds");														//
-		var $uiAmount = $("#amount");												//
-		var $uiSliderPrice = $("#ui-slider-price");									//
+		// /* ---------------------------------------------------------------------- */
+		// /*	Ini jQuery UI Slider
+		// /* ---------------------------------------------------------------------- */
+		// var $uislider =  $("#ui-slider");											// UI Slider Variables
+		// var $beds = $("#beds");														//
+		// var $uiAmount = $("#amount");												//
+		// var $uiSliderPrice = $("#ui-slider-price");									//
 
-		$uislider.slider({
-			range : true,
-			min : 0,
-			max : 10,
-			values : [1, 4],
-			slide : function(event, ui) {
-				$beds.val("Select Bedrooms: " + ui.values[0] + " - " + ui.values[1]);
-			}
-		});
+		// $uislider.slider({
+		// 	range : true,
+		// 	min : 0,
+		// 	max : 10,
+		// 	values : [1, 4],
+		// 	slide : function(event, ui) {
+		// 		$beds.val("Select Bedrooms: " + ui.values[0] + " - " + ui.values[1]);
+		// 	}
+		// });
 
-		$beds.val("Select Bedrooms: " + $uislider.slider("values", 0) + " - " + $uislider.slider("values", 1));
-		$uiSliderPrice.slider({
-			range : true,
-			min : 25000,
-			max : 925000,
-			values : [110000, 255000],
-			slide : function(event, ui) {
-				$uiAmount.val("Price Range: $" + ui.values[0] + " - $" + ui.values[1]);
-			}
-		});
-		$uiAmount.val("Price Range: $" + $uiSliderPrice.slider("values", 0) + " - $" + $uiSliderPrice.slider("values", 1)); 
+		// $beds.val("Select Bedrooms: " + $uislider.slider("values", 0) + " - " + $uislider.slider("values", 1));
+		// $uiSliderPrice.slider({
+		// 	range : true,
+		// 	min : 25000,
+		// 	max : 925000,
+		// 	values : [110000, 255000],
+		// 	slide : function(event, ui) {
+		// 		$uiAmount.val("Price Range: $" + ui.values[0] + " - $" + ui.values[1]);
+		// 	}
+		// });
+		// $uiAmount.val("Price Range: $" + $uiSliderPrice.slider("values", 0) + " - $" + $uiSliderPrice.slider("values", 1)); 
 		
-		/*end jQuery UI Slider*/ 
+		// /*end jQuery UI Slider*/ 
 		
 		
 		/* ---------------------------------------------------------------------- */

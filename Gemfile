@@ -69,3 +69,5 @@ gem 'jquery-fileupload-rails'
 gem 'fotoramajs'
 
 gem 'initjs'
+
+gem 'ransack'
